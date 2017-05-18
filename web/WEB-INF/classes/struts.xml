@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="com.DataAction.Action" extends="struts-default">
+
+        <global-results>
+            <result name="success">/sucess.jsp</result>
+        </global-results>
+
+        <action name="login" class="com.DataAction.Action.LoginAction" method="execute">
+            <result name="error">/error.jsp</result>
+            <result name="success">/weclome.jsp</result>
+        </action>
+
+        <action name="error" class="com.DataAction.Action.LoginAction" method="error">
+            <result name="error">/error.jsp</result>
+            <result name="success">/weclome.jsp</result>
+        </action>
+    </package>
+</struts>
